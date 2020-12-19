@@ -1,5 +1,6 @@
 package uk.co.ceilingcat.rrd.usecases
 
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS
@@ -9,9 +10,13 @@ import java.time.LocalDate
 internal class CurrentDateTests {
 
     @Test
-    fun `That createCurrentDate() returns instances with ane values`() {
+    fun `That createCurrentDate() returns instances with vaguely sane values`() {
+        val then = LocalDate.now()
         createCurrentDate().run {
-            localDate <= LocalDate.now()
+            val result = localDate
+            val now = LocalDate.now()
+            Assertions.assertTrue(then <= result)
+            Assertions.assertTrue(now >= result)
         }
     }
 }

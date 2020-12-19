@@ -29,7 +29,7 @@ typealias NoOutputGatewaysError = NoOutputGatewaysException
 typealias AllInputGatewaysFailedError = AllInputGatewaysFailedException
 typealias AllOutputGatewaysFailedError = AllOutputGatewaysFailedException
 
-internal fun createNotifyOfNextServiceDate(
+fun createNotifyOfNextServiceDate(
     currentDate: CurrentDate,
     inputGateways: List<NextUpcomingInputGateway>,
     outputGateways: List<UpcomingOutputGateway>

@@ -15,7 +15,7 @@ interface CurrentDate : UseCase {
 /**
  * Creates a `CurrentDate` use case.
  */
-internal fun createCurrentDate(): CurrentDate = CurrentDateUseCase()
+fun createCurrentDate(): CurrentDate = CurrentDateUseCase()
 
 private class CurrentDateUseCase : CurrentDate {
     override val localDate: LocalDate
