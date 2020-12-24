@@ -6,7 +6,6 @@ For usage information, please see the dokka [docs](https://chrisdenman.github.io
 ## System Requirements
 
 -   JDK 11
--   OSX
 
 
 ## Licensing
